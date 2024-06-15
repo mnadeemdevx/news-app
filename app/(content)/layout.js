@@ -1,6 +1,6 @@
 import { MainHeader } from '@/components';
 
-import './globals.css';
+import '../globals.css';
 
 export const metadata = {
     title: 'News App',

@@ -131,6 +131,12 @@ ul {
     background-color: #2d2d2b;
 }
 
+.news-article img {
+    width: 7rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
 .modal-backdrop {
     position: fixed;
     top: 0;
@@ -143,12 +149,6 @@ ul {
     align-items: center;
 }
 
-.news-article img {
-    width: 7rem;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-}
-
 .modal {
     background-color: #bababa;
     padding: 2rem;
@@ -157,6 +157,10 @@ ul {
     box-shadow: 0 0 10px 0 #181817;
     max-width: 50rem;
     width: 100%;
+}
+
+.modal-image img {
+    max-width: 46rem;
 }
 
 .modal h2,
@@ -192,4 +196,8 @@ ul {
 .error {
     text-align: center;
     margin-top: 3rem;
+}
+
+.fullscreen-image img {
+    max-width: 60rem;
 }
