@@ -1,4 +1,4 @@
-import SharedRootLayout from '../layout';
+import '../globals.css';
 
 export const metadata = {
     title: 'News App',
@@ -7,8 +7,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <SharedRootLayout>
-            <div id="page">{children}</div>
-        </SharedRootLayout>
+        <html lang="en">
+            <body>
+                <div id="page">{children}</div>
+            </body>
+        </html>
     );
 }

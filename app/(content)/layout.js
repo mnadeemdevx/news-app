@@ -1,5 +1,6 @@
 import { MainHeader } from '@/components';
-import SharedRootLayout from '../layout';
+
+import '../globals.css';
 
 export const metadata = {
     title: 'News App',
@@ -8,11 +9,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <SharedRootLayout>
-            <div id="page">
-                <MainHeader />
-                {children}
-            </div>
-        </SharedRootLayout>
+        <html lang="en">
+            <body>
+                <div id="page">
+                    <MainHeader />
+                    {children}
+                </div>
+            </body>
+        </html>
     );
 }
