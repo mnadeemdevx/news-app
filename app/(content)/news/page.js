@@ -1,15 +1,14 @@
-import { Suspense } from 'react';
+import { NewsGrid } from "@/components";
 
-import { DUMMY_NEWS } from '@/utils/dummy-news';
-import { NewsGrid } from '@/components';
+import { getAllNews } from "@/lib/news";
 
-const NewsPage = () => {
+const NewsPage = async () => {
+    const news = await getAllNews();
+
     return (
         <>
             <h1>News Page</h1>
-            <Suspense fallback={<p>Fetching news...</p>}>
-                <NewsGrid news={DUMMY_NEWS} />
-            </Suspense>
+            <NewsGrid news={news} />
         </>
     );
 };

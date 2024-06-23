@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import { DUMMY_NEWS } from '@/utils/dummy-news';
+import { getNewsItem } from "@/lib/news";
 
-const NewsDetailsPage = (props) => {
+const NewsDetailsPage = async (props) => {
     const { params } = props;
 
-    const newsItem = DUMMY_NEWS.find((item) => item.slug === params.slug);
+    const newsItem = await getNewsItem(params.slug);
 
     if (!newsItem) notFound();
 
